@@ -30,11 +30,11 @@ Known URLS:
 Example:
 
 ```html
-  <head>
+<head>
      ...
      <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  </head>
-  <body>
+</head>
+<body>
     ...
     <script
         src="https://vidya-player.glitch.me/playlist.js"
@@ -51,6 +51,6 @@ Example:
         announce="false" 
         spatial="false"
       ></script>
-  </body>
+</body>
 ```
 
