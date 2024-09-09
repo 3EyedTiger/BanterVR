@@ -2,7 +2,7 @@
 
 ## Components
 
-### Vidya Player
+### Vidya Player (For Youtube)
 
 Known URLS:
 
