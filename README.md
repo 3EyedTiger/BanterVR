@@ -2,6 +2,24 @@
 
 ## Components
 
+### Spawn Location
+
+```html
+<head>
+     ...
+     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+<body>
+    <a-scene
+      sq-disableteleport
+      sq-maxoccupancy="number: 64"
+      sq-spawnpoint="position: 0 1 0;"
+      sq-friendpositionjoinallowed="false"
+    >
+    ...
+</body>
+```
+
 ### Vidya Player (For Youtube)
 
 Known URLS:
@@ -13,11 +31,11 @@ Example:
 
 ```html
   <head>
-...
+     ...
      <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   </head>
   <body>
-...
+    ...
     <script
         src="https://vidya-player.glitch.me/playlist.js"
         position="0 0 0"
