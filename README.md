@@ -58,7 +58,7 @@ Example:
 
 ### Individual Vidya Player (For Youtube)
 
-Allows for individualised control of one youtube player, great for unattended.
+Allows for individualised control of one youtube player, great for unattended use.
 
 Known URLS:
 
