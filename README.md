@@ -22,6 +22,8 @@
 
 ### Vidya Player (For Youtube)
 
+Allows for open communal control of one synchronised youtube player.
+
 Known URLS:
 
 * https://vidya-player.glitch.me/playlist.js
@@ -52,5 +54,57 @@ Example:
         spatial="false"
       ></script>
 </body>
+```
+
+### Individual Vidya Player (For Youtube)
+
+Allows for individualised control of one youtube player, great for unattended.
+
+Known URLS:
+
+* https://vidya-player.glitch.me/playlist.js
+* https://vidya.sdq.st/playlist.js
+
+Example:
+
+```html
+<script
+      src="https://vidya.sdq.st/playlist.js"
+      position="-9.6 -6 25.7"
+      rotation="-90 180 0"
+      scale="13 17 1"
+      volume="15"
+      instance="white-lotus-banter"
+      one-for-each-instance="true"
+      playlist="PLDcXEgXu2q0OnSRC0_cT1Pm8twHM9dygx"
+      button-position="-10 0.7 1.8"
+      button-rotation="0 180 0" 
+      button-scale="0.5 0.5 0.5"
+      announce="false" 
+      spatial="false"
+  ></script>
+  
+
+    <!-- Individual Player -->
+  <script>
+      function generateRandomString(length) {
+          const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          let result = '';
+          for (let i = 0; i < length; i++) {
+              result += characters.charAt(Math.floor(Math.random() * characters.length));
+          }
+          return result;
+      }      
+
+      const scriptTag = document.querySelector('script[src*="https://vidya.sdq.st/playlist.js"]');
+
+      if (scriptTag) {
+        // Generate a random 10-character string
+        const randomString = generateRandomString(10);
+
+        // Set the `inst` attribute with the random string
+        scriptTag.setAttribute('instance', `white-lotus-banter-${randomString}`);
+      }
+  </script>
 ```
 
