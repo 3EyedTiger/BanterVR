@@ -74,7 +74,7 @@ Example:
       rotation="-90 180 0"
       scale="13 17 1"
       volume="15"
-      instance="white-lotus-banter"
+      instance="unique-space-name-"
       one-for-each-instance="true"
       playlist="PLDcXEgXu2q0OnSRC0_cT1Pm8twHM9dygx"
       button-position="-10 0.7 1.8"
@@ -103,7 +103,7 @@ Example:
         const randomString = generateRandomString(10);
 
         // Set the `inst` attribute with the random string
-        scriptTag.setAttribute('instance', `white-lotus-banter-${randomString}`);
+        scriptTag.setAttribute('instance', `unique-space-name-${randomString}`);
       }
   </script>
 ```
