@@ -108,3 +108,37 @@ Example:
   </script>
 ```
 
+
+### Screencast Player (For Browser Tab / Desktop Sharing)
+
+Put the below snippet in your bullshcript.js
+
+Then use https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/ to cast a browser tab - swap the "874378434" in the method call with the uniquely assigned value for that session.
+
+```
+    async function showScreenCast(id){
+        // screencast:
+        const url = `https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=${id}`;
+        const mipMaps = 4;
+        const pixelsPerUnit = 1200;
+        //const actions = "click2d,0.5,0.5";
+        const gameObject = new BS.GameObject("ScreenCastBrowser"); 
+        const pageWidth = 1280;
+        const pageHeight = 720;
+        const browser = await gameObject.AddComponent(new BS.BanterBrowser(url, mipMaps, pixelsPerUnit, pageWidth, pageHeight));
+        const transform = await gameObject.AddComponent(new BS.Transform());
+
+        transform.position = new BS.Vector3(-9.6, -6, -25.6);
+        transform.localRotation = new BS.Vector3(1 ,-45 ,45);
+        transform.localScale = new BS.Vector3(10.2, 11.2, 1);
+        // ...
+        browser.ToggleInteraction(false);
+        // ...
+        //browser.RunActions("click2d,0.5,0.5");
+    }
+
+
+
+    // initialize : USE WITH https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/
+    showScreenCast("874378434");
+```'
